@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+{% load staticfiles %}
+<div class="text-center">
+ <p>
+ There has been <strong>{{count}}</strong> entries.
+ </p>
+</div>
+<br />
+<form action="/" method="POST">
+ {% csrf_token %}
+ {{form}}
+ <input type="submit" class="btn btn-primary btn-lg btn-block" value="Enter">
+</form>
+<br />
+<hr />
+<div>
+ {% for data in data_row %}
+ <h4 class="well"><em>{{data.date}}</em> - <strong>{{data.gender}}</strong> - <strong>{{data.favorite_number}}</strong></h4>
+ {% endfor %}
+</div>
+{% endblock content %}
