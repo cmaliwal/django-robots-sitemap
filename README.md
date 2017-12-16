@@ -5,13 +5,22 @@ The first thing a spider is supposed to do when it visits your website is look f
 Robots.txt file : Robots.txt is basically a text file that defines the rules of search engine robots (bot) to inform the robots  what part of the website should be indexed  and what urls should not be indexed.
  
 Example :
+
 User-agent: *
+
 Disallow: /sot-admin/
+
 Disallow: /404.html?page=
+
 Disallow: *&search=s
+
 Disallow: */tag/
+
 Disallow: */?page_id=
-Sitemap: http://sayonetech.com/sitemap.xml
+
+Sitemap: http://localhost:8000/sitemap.xml
+
+
 For more details about robots.txt file : http://www.robotstxt.org/robotstxt.html
  
 Sitemap.xml : Sitemap is very important piece of information for any website which help  search engines to index  your website.
